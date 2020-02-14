@@ -1,2 +1,65 @@
-<input type="text" [(ngModel)]="name" />
-<p>{{name}}</p>
+<div class="container">
+    <div class="row">
+
+        <div class="jumbotron">
+            <h3>Header to be updated</h3>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div ngbDropdown class="d-inline-block">
+                <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle
+                    dropdown</button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                    <button ngbDropdownItem>Action - 1</button>
+                    <button ngbDropdownItem>Another Action</button>
+                    <button ngbDropdownItem>Something else is here</button>
+                </div>
+                <br><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="btn-group mr-3">
+        <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+            <button class="btn btn-outline-danger" ngbDropdownToggle>Select me</button>
+            <div class="dropdown-menu" ngbDropdownMenu>
+                <button ngbDropdownItem>One</button>
+                <button ngbDropdownItem>Two</button>
+                <button ngbDropdownItem>Four!</button>
+            </div>
+        </div>
+        <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+            <button class="btn btn-outline-success" ngbDropdownToggle>Or me</button>
+            <div class="dropdown-menu" ngbDropdownMenu>
+                <button ngbDropdownItem>One</button>
+                <button ngbDropdownItem>Two</button>
+                <button ngbDropdownItem>Four!</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <button (click)="d1.toggle()">Select Start Date</button>
+        <input type="text" ngbDatepicker #d1="ngbDatepicker" />
+
+        <button (click)="d2.toggle()">Select End Date</button>
+        <input type="text" ngbDatepicker #d2="ngbDatepicker" />
+
+    </div>
+</div>
+
+<div class="container">
+
+    <div *ngFor="let assignment of assignments">
+        test
+        <!-- <{{assignment}}></{{assignment}}> -->
+    </div>
+</div>
